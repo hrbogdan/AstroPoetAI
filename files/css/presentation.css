@@ -1,6 +1,7 @@
 @import url(/files/css/style.css);
 body {
   overflow-x: hidden;
+  font-size: 10px;
 }
 
 p {
@@ -73,4 +74,48 @@ p:hover {
 
 .space {
   height: 10vh;
+}
+
+@media screen and (max-width: 500px) {
+  .row {
+    display: flex;
+    flex-direction: column !important;
+  }
+  .col {
+    transform: scale(210%);
+    margin-top: 7.5vh;
+  }
+  .description {
+    margin-top: 0.5vh;
+  }
+  .how-we-started {
+    min-height: 100vh;
+    height: 90%;
+  }
+  .how-we-started > p,
+  .team > .col > p {
+    font-size: 1.5rem;
+  }
+  .team {
+    overflow: hidden;
+  }
+  .team > .col > img {
+    background-size: cover;
+    height: 20vh;
+  }
+  .mobile_p {
+    font-size: 0.65rem !important;
+    width: 45%;
+  }
+  .results {
+    overflow: hidden;
+    height: 80vh;
+  }
+  .results > img {
+    background-size: cover;
+    height: 60vh;
+  }
+  .space {
+    height: 0;
+  }
 }
