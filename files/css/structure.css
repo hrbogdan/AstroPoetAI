@@ -34,6 +34,10 @@ p {
   margin-right: auto;
 }
 
+p:hover {
+  cursor: default;
+}
+
 /* WEBSITE ALIGNMENT BLOCKS */
 .round {
   border-radius: 2vw;
