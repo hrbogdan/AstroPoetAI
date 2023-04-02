@@ -33,17 +33,22 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: 0.3s;
 }
 
 .member > .row > .col > img {
   /* height: 30vh; */
   width: 15vw;
-  transition: 0.3s;
 }
 
-img:hover {
+.member > .row > .col:hover {
   transition: 0.3s;
   transform: scale(120%);
+  cursor: default;
+}
+
+p:hover {
+  cursor: default;
 }
 
 .team > .col > img {
