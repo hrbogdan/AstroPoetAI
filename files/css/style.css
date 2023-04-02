@@ -1,3 +1,7 @@
+* {
+  overflow-x: hidden;
+}
+
 .navbar {
   width: 100%;
   background-color: rgb(0, 0, 0, 0.7);
@@ -23,10 +27,13 @@
   margin-left: 22vw;
 }
 
-.poza {
+.navbar > img,
+.navbar > .poza {
   text-align: center;
   margin-right: auto;
   margin-left: auto;
+  height: 100%;
+  width: auto;
 }
 
 .but2 {
