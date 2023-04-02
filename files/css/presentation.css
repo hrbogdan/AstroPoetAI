@@ -6,10 +6,9 @@ body {
 .member,
 .team,
 .how-we-started,
-.about-our-work,
 .results {
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -22,7 +21,7 @@ body {
 }
 
 .col-dims {
-  width: 30rem;
+  width: 25vw;
   height: auto;
 }
 
@@ -37,8 +36,8 @@ body {
 }
 
 img {
-  height: 30vh;
-  width: 30vh;
+  /* height: 30vh; */
+  width: 15vw;
 }
 
 .team > .col > img {
@@ -50,4 +49,11 @@ img {
 .results > img {
   height: 80%;
   width: auto;
+}
+
+.selected1 {
+  transform: scale(120%);
+}
+
+@media screen {
 }

@@ -23,6 +23,10 @@
   transform: scale(130%);
 }
 
+.selected1 {
+  transform: scale(120%);
+}
+
 .but1 {
   color: white;
   text-align: center;
