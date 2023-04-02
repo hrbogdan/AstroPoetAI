@@ -1,0 +1,43 @@
+@import url(style.css);
+
+.member,
+.team,
+.how-we-started,
+.about-our-work,
+.results {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  width: 40vh;
+  height: 50vh;
+  align-items: center;
+}
+
+img {
+  height: 30vh;
+  width: 30vh;
+}
+
+.team > .col > img {
+  height: 60vh;
+  width: auto;
+  border-radius: 1.5rem;
+}
+
+.results > img {
+  height: 90%;
+  width: auto;
+}
