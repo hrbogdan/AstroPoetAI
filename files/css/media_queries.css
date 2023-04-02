@@ -1,0 +1,18 @@
+/* CSS Document */
+
+.navbar_m {display: none !important;}
+.navbar_m {flex-direction: column !important;}
+.navbar_m>div {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 500px){
+	.navbar_m {display: flex !important;}
+	.navbar_pc {display: none !important;}
+	
+	
+}
