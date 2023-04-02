@@ -1,120 +1,145 @@
 <!DOCTYPE html>
 <html>
-    <head>
-		<!-- META DATA -->
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		
-		<!-- IMPORT CSS FILES -->
-		<link href="style.css" rel="stylesheet" type="text/css">
-		<link href="structure.css" rel="stylesheet" type="text/css">
-		
-		<!-- TITLE AND ICON -->
-        <title>AI Poem Generator</title>
-        <link rel="icon" type="image/x-icon" href="https://i.pinimg.com/originals/13/be/ff/13befffd131070b14b5dc78f6997bcba.png">
-        
-		<!-- LOAD GOOGLE FONTS -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Alkatra:wght@400;500;600;700&display=swap" rel="stylesheet">
-        
-		<!-- SCRIPTS -->
-		<script src="tts.js" defer></script>
-		<script>
-			
-			function submit() {
-				var strophes = "2";
-				var verses = "4";
-				var theme = document.getElementById("theme").value;
-				var keywords = document.getElementById("keywords").value;
+  <head>
+    <!-- META DATA -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-				document.getElementById("output_container").style.display = "block";
-				
-				const options = {
-					method: 'POST',
-					headers: {
-						accept: 'application/json',
-						'content-type': 'application/json'
-					},
-					body: JSON.stringify({
-						strophes: strophes,
-						verses: verses,
-						theme: theme,
-						keywords: keywords
-					})
-				};
+    <!-- IMPORT CSS FILES -->
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="structure.css" rel="stylesheet" type="text/css" />
 
-				var poem = "API Error";
-				var link = 'https://www.freeiconspng.com/uploads/error-icon-7.png';
-console.log("1");
-				fetch('http://localhost:8080/poem', options)
-					.then(async response => {
-						poem_obj = await response.json();
-						poem = poem_obj.poem;
-console.log(poem);
-						poem = poem.replace(/(?:\r\n|\r|\n)/g, '<br>');
-						link = poem_obj.link;
-						document.getElementById("text").innerHTML = poem;
-						document.getElementById("image").src = link;
-					})
-					.catch(err => {
-						poem = 'Sorry, we could not generate a poem for you at this time, please try again later';
-						link = 'https://www.freeiconspng.com/uploads/error-icon-7.png';
-						console.error(err);
-					});
-			}
-		</script>
-    </head>
-    <body>
-        <!---------Header---------->
-        <div class="header">
-            <div class="back">
-                <h1 class="titlu">WELCOME TO ASTROPOET AI</h1>
-            </div>
-            <a href="#formular" class="arrow"></a>
+    <!-- TITLE AND ICON -->
+    <title>AI Poem Generator</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://i.pinimg.com/originals/13/be/ff/13befffd131070b14b5dc78f6997bcba.png"
+    />
+
+    <!-- LOAD GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alkatra:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- SCRIPTS -->
+    <script src="tts.js" defer></script>
+    <script>
+      function submit() {
+        var strophes = "2";
+        var verses = "4";
+        var theme = document.getElementById("theme").value;
+        var keywords = document.getElementById("keywords").value;
+
+        document.getElementById("output_container").style.display = "block";
+
+        const options = {
+          method: "POST",
+          headers: {
+            accept: "application/json",
+            "content-type": "application/json",
+          },
+          body: JSON.stringify({
+            strophes: strophes,
+            verses: verses,
+            theme: theme,
+            keywords: keywords,
+          }),
+        };
+
+        var poem = "API Error";
+        var link = "https://www.freeiconspng.com/uploads/error-icon-7.png";
+        console.log("1");
+        fetch("/poem", options)
+          .then(async (response) => {
+            poem_obj = await response.json();
+            poem = poem_obj.poem;
+            console.log(poem);
+            poem = poem.replace(/(?:\r\n|\r|\n)/g, "<br>");
+            link = poem_obj.link;
+            document.getElementById("text").innerHTML = poem;
+            document.getElementById("image").src = link;
+          })
+          .catch((err) => {
+            poem =
+              "Sorry, we could not generate a poem for you at this time, please try again later";
+            link = "https://www.freeiconspng.com/uploads/error-icon-7.png";
+            console.error(err);
+          });
+      }
+    </script>
+  </head>
+  <body>
+    <!---------Header---------->
+    <div class="header">
+      <div class="back">
+        <h1 class="titlu">WELCOME TO ASTROPOET AI</h1>
+      </div>
+      <a href="#formular" class="arrow"></a>
+    </div>
+    <!--------Formular--------->
+    <section id="formular" class="main centered font_m1">
+      <div class="round padding centered column">
+        <p class="title" style="font-weight: 500; margin-bottom: 1vw">
+          Try our poem generator and get a bonus image!
+        </p>
+        <label for="theme">Theme</label>
+        <input id="theme" name="theme" type="text" />
+        <label for="keywords">Keywords</label>
+        <input id="keywords" name="keywords" type="text" />
+        <a href="#output_container"
+          ><button id="submit" onclick="submit()">Submit</button></a
+        >
+      </div>
+    </section>
+    <div
+      id="output_container"
+      class="container_output font_m2"
+      style="display: none"
+    >
+      <div>
+        <div id="text" class="font_m2">
+          <br /><br /><br />
+          Generating poem...<br />
+          <br /><br /><br />
         </div>
-        <!--------Formular--------->
-        <section id="formular" class="main centered font_m1">
-            <div class="round padding centered column">
-				<p class="title" style="font-weight: 500; margin-bottom: 1vw;">Try our poem generator and get a bonus image!</p>
-                <label for="theme">Theme</label>
-                <input id="theme" name="theme" type="text"/>
-                <label for="keywords">Keywords</label>
-                <input id="keywords" name="keywords" type="text"/>
-                <a href="#output_container"><button id="submit" onclick="submit()">Submit</button></a>
-            </div>
-        </section>
-		<div id="output_container" class="container_output font_m2" style="display: none">
-			<div>
-            	<div id="text" class="font_m2">
-					<br><br><br>
-					Generating poem...<br>
-					<br><br><br>
-           		</div>
-				<div>
-					<img id="image" src="" alt="">
-				</div>
-			</div>
-            <div>
-                <button id="play" class="butonc1">Play&#128266;</button>
-                <button id="stop" class="butonc2">Stop&#128263;</button>
-            </div>
-        </div>
-        <!----------Main----------->
         <div>
-            <h1>ABOUT OUR AI</h1>
-            <p>
-				Our AI Poem Generator can create poetry in a variety of forms, including sonnets, haikus, and free verse, and can incorporate a range of themes and topics. Whether you're looking for love poetry, nature poetry, or anything in between, our AI Poem Generator can provide a customized experience that meets your specific needs and preferences.
-			</p>
+          <img id="image" src="" alt="" />
         </div>
-        <!---------Footer---------->
-        <div class="footer font_m1">
-            <div>
-                <p class="pf">© 2023 <a href="#" class="copyright">HARIBO TEAM</a> - ALL RIGHTS RESERVED</p>
-            </div>
-        </div>
-        <!------------------------->
-    </body>
+      </div>
+      <div>
+        <button id="play" class="butonc1">Play&#128266;</button>
+        <button id="stop" class="butonc2">Stop&#128263;</button>
+      </div>
+    </div>
+    <!----------Main----------->
+    <div>
+      <h1>ABOUT OUR AI</h1>
+      <p>
+        Our AI Poem Generator can create poetry in a variety of forms, including
+        sonnets, haikus, and free verse, and can incorporate a range of themes
+        and topics. Whether you're looking for love poetry, nature poetry, or
+        anything in between, our AI Poem Generator can provide a customized
+        experience that meets your specific needs and preferences.
+      </p>
+    </div>
+    <!---------Footer---------->
+    <div class="footer font_m1">
+      <div>
+        <p class="pf">
+          © 2023 <a href="#" class="copyright">HARIBO TEAM</a> - ALL RIGHTS
+          RESERVED
+        </p>
+      </div>
+    </div>
+    <!------------------------->
+  </body>
 </html>
