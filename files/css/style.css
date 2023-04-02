@@ -174,7 +174,7 @@
 .container_output > div {
   display: flex;
   flex-direction: row;
-  align-itmes: center;
+  align-items: center;
   justify-content: center;
 }
 .container_output > div > div:first-child {
