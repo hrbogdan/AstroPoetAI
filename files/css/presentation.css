@@ -3,6 +3,11 @@ body {
   overflow-x: hidden;
 }
 
+p {
+  margin-bottom: 0;
+  font-size: 1.8vw;
+}
+
 .member,
 .team,
 .how-we-started,
@@ -52,7 +57,7 @@ p:hover {
 }
 
 .team > .col > img {
-  height: 70vh;
+  height: 55vh;
   width: auto;
   border-radius: 1.5rem;
 }
@@ -66,5 +71,6 @@ p:hover {
   transform: scale(120%);
 }
 
-@media screen {
+.space {
+  height: 10vh;
 }
