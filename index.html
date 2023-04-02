@@ -80,12 +80,12 @@
   </head>
   <body>
     <!------Navbar-------------->
-    <div class="navbar navbar_pc">
+    <div class="navbar only_pc">
       <a href="/" class="nav but1 selected1">HOME</a>
       <img src="https://i.ibb.co/PWVQqRZ/logo.png" class="poza" />
       <a href="/presentation" class="nav but2">ABOUT US</a>
     </div>
-	<div class="navbar navbar_m">
+	<div class="navbar only_m navbar_m">
       <img src="https://i.ibb.co/PWVQqRZ/logo.png" class="poza" />
 	  <div>
         <a href="/" class="nav but1 selected1">HOME</a>
@@ -95,29 +95,30 @@
     <!---------Header---------->
     <div class="header">
       <div class="back">
-        <h1 class="titlu">WELCOME TO ASTROPOET AI</h1>
+        <h1 class="titlu only_pc">WELCOME TO ASTROPOET AI</h1>
+		<h1 class="titlu only_m">WELCOME TO<br>ASTROPOET AI</h1>
       </div>
       <a href="#formular" class="arrow"></a>
     </div>
     <!--------Formular--------->
-    <section id="formular" class="main centered font_m1">
+    <div id="formular" class="main centered font_m1">
       <div class="round padding centered column">
-        <p class="title" style="font-weight: 500; margin-bottom: 1vw">
+        <p style="font-weight: 500; margin-bottom: 1vw">
           Try our poem generator and get a bonus image!
         </p>
         <label for="theme">Theme</label>
         <input id="theme" name="theme" type="text" />
         <label for="keywords">Keywords</label>
         <input id="keywords" name="keywords" type="text" />
-        <a href="#output_container"
-          ><button id="submit" onclick="submit()">Submit</button></a
-        >
+        <a href="#output_container">
+			<button id="submit" onclick="submit()">Submit</button>
+		</a>
       </div>
-    </section>
+    </div>
     <div
       id="output_container"
       class="container_output font_m2"
-      style="display: none"
+      style=""
     >
       <div>
         <div id="text" class="font_m2">
@@ -135,7 +136,7 @@
       </div>
     </div>
     <!----------Main----------->
-    <div>
+    <div class="about_our_ai">
       <h1>ABOUT OUR AI</h1>
       <p>
         Our AI Poem Generator can create poetry in a variety of forms, including

@@ -186,12 +186,11 @@
 }
 .container_output > div {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 .container_output > div > div:first-child {
-  position: relative;
   width: 30vw;
   height: 40vw;
   background-color: #0f294d;
@@ -201,7 +200,6 @@
   padding-top: 1vw;
   padding-bottom: 1vw;
 
-  margin-right: 1vw;
   font-size: 1.4vw;
 
   overflow-x: hidden;
@@ -213,8 +211,6 @@
   overflow: hidden;
 
   border-radius: 0.6vw;
-
-  margin-left: 1vw;
 }
 #image {
   height: 100%;

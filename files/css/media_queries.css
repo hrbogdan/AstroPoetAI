@@ -1,18 +1,145 @@
 /* CSS Document */
 
-.navbar_m {display: none !important;}
-.navbar_m {flex-direction: column !important;}
+.only_m {display: none !important;}
+
+.navbar_m {
+	flex-direction: column !important;
+	height: auto;
+	padding: 2vw 0;
+}
+.navbar_m>img {
+	height: 10vw !important;
+}
 .navbar_m>div {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
+	
+	width: 100%;
+	margin: 0;
+	margin-top: 2vw;
+}
+.navbar_m>div>a {
+	font-size: 5vw !important;
+	margin: 0 auto;
+	width: 50%;
 }
 
 /* MEDIA QUERIES */
 @media screen and (max-width: 500px){
-	.navbar_m {display: flex !important;}
-	.navbar_pc {display: none !important;}
+	.only_m {display: flex !important;}
+	.only_pc {display: none !important;}
+	
+	.titlu {font-size: 9vw;}
+	.arrow {
+		margin-top: 12vw;
+		width: 8vw;
+		height: 8vw;
+		border-right: 1vw #fff solid;
+  		border-bottom: 1vw #fff solid;
+	}
+	.arrow:before {
+		width: 4vw;
+		height: 4vw;
+	 	border-right: 1vw #fff solid;
+  		border-bottom: 1vw #fff solid;
+		margin: -2vw 0 0 -2vw;
+	}
+	@keyframes arrow {
+ 		0% {
+  		  opacity: 1;
+  		}
+  		100% {
+  		  opacity: 0;
+  		  transform: translate(-2vw, -2vw);
+  		}
+	}
+	.arrow:hover {
+ 		width: 9vw;
+ 		height: 9vw;
+	}
 	
 	
+	.main {margin-bottom: 35vw;}
+	.main>div {
+		width: 90vw;
+		height: auto;
+		margin: 0;
+		border-radius: 5vw;
+	}
+	.main>div>p {
+		font-size: 6vw;
+		margin: 2vw 0;
+	}
+	.main>div>label {
+		font-size: 5vw;
+		margin: 2vw 0;
+	}
+	.main>div>input {
+		height: 6vw;
+		font-size: 5vw;
+		margin: 0 0 2vw 0;
+		border-radius: 5vw;
+	}
+	.main>div button {
+		padding: 1.5vw;
+		font-size: 5vw;
+		margin: 2vw 0;
+		border-radius: 5vw;
+	}
+	
+	
+	
+	.container_output {
+		width: 90vw;
+		border-radius: 5vw;
+	}
+	.container_output {
+		width: 90vw;
+	}
+	.container_output>div>div {
+		width: 80vw !important;
+		border-radius: 5vw !important;
+		margin: 5vw 0;
+		padding: 0;
+	}
+	#text {height: 100vw !important; font-size: 4vw;}
+	#image {width: 80vw; height: auto;}
+	
+	
+	
+	.container_output>div:last-child {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.container_output>div:last-child>button {
+		width: 80vw !important;
+		height: auto !important;
+		font-size: 5vw;
+		border-radius: 5vw;
+		margin: 2vw 0;
+		padding: 2vw 0;
+	}
+	
+	
+	
+	.about_our_ai>h1 {
+		font-size: 7vw;
+		margin-bottom: 3vw;
+	}
+	.about_our_ai>p {
+		font-size: 4.5vw;
+	}
+	
+	
+	
+	.footer>div{
+ 		height: 10vw;
+  		margin: 10vw 0;
+	}
+	.pf {
+  		font-size: 3vw;
+	}
 }
