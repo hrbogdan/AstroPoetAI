@@ -95,7 +95,7 @@
 		width: 90vw;
 		border-radius: 5vw;
 	}
-	.container_output {
+	.container_output>div {
 		width: 90vw;
 	}
 	.container_output>div>div {
@@ -108,9 +108,15 @@
 	#image {width: 80vw; height: auto;}
 	
 	
-	
+	.conatiner_output>div:first-child {
+		
+		flex-direction: column !important;
+		
+		justify-content: center;
+		align-items: center;
+	}
 	.container_output>div:last-child {
-		flex-direction: column;
+		flex-direction: column !important;
 		justify-content: center;
 		align-items: center;
 	}
