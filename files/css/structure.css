@@ -23,6 +23,11 @@ h1 {
   font-size: 3vw;
   color: white;
 }
+
+h1:hover {
+  cursor: default;
+}
+
 p {
   color: white;
   text-align: center;
