@@ -106,6 +106,7 @@ p:hover {
   .mobile_p {
     font-size: 0.55rem !important;
     width: 45%;
+    margin-bottom: 2vh;
   }
   .results {
     overflow: hidden;
