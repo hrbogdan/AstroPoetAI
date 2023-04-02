@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <title>AstroPoet AI</title>
     <link href="/files/css/structure.css" rel="stylesheet" type="text/css" />
+    <link href="/files/css/media_queries.css" rel="stylesheet" type="text/css" />
     <link href="/files/css/presentation.css" rel="stylesheet" type="text/css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,16 +16,22 @@
     <link
       rel="icon"
       type="image/x-icon"
-      href="https://i.ibb.co/qjKyHWC/H-removebg-preview-1-1.png"
+      href="https://i.ibb.co/Ln8L1FC/H-removebg-preview-1.png"
     />
   </head>
   <body>
     <!------Navbar-------------->
-    <div class="navbar">
+    <div class="navbar only_pc">
       <a href="/" class="nav but1">HOME</a>
       <img src="https://i.ibb.co/PWVQqRZ/logo.png" class="poza" />
-      <a class="nav but2 selected1" href="/presentation">ABOUT US</a>
+      <a href="/presentation" class="nav but2 selected1">ABOUT US</a>
     </div>
+	<div class="navbar only_m navbar_m">
+      <img src="https://i.ibb.co/PWVQqRZ/logo.png" class="poza" />
+	  <div>
+        <a href="/" class="nav but1 ">HOME</a>
+        <a href="/presentation" class="nav but2 selected1">ABOUT US</a>
+	  </div>
     <!-- Individual members -->
     <div class="member">
       <div class="row">
@@ -54,7 +61,7 @@
     </div>
     <!-- Our idea -->
     <div class="how-we-started">
-      <p>
+      <p class="mobile_p">
         We developed an app, placing a strong emphasis on user experience and
         design, intending to create an intuitive and user-friendly interface
         that encourages users to explore and experiment with different styles
