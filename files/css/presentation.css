@@ -1,4 +1,7 @@
 @import url(/files/css/style.css);
+body {
+  overflow-x: hidden;
+}
 
 .member,
 .team,
@@ -18,11 +21,14 @@
   gap: 5rem;
 }
 
+.col-dims {
+  width: 50vh;
+  height: 50vh;
+}
+
 .col {
   display: flex;
   flex-direction: column;
-  width: 40vh;
-  height: 50vh;
   align-items: center;
 }
 
@@ -32,12 +38,12 @@ img {
 }
 
 .team > .col > img {
-  height: 80vh;
+  height: 50vh;
   width: auto;
   border-radius: 1.5rem;
 }
 
 .results > img {
-  height: 90%;
+  height: 80%;
   width: auto;
 }

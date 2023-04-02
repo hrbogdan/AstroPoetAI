@@ -1,144 +1,176 @@
 /* CSS Document */
 
-
-
 /* DEFAULT TAG VALUES */
 * {
-	margin: 0;
-	padding: 0;
-	font-family: 'Rajdhani', sans-serif;
-	scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  font-family: "Rajdhani", sans-serif;
+  scroll-behavior: smooth;
 }
 body {
-	width: 100%;
-	height: 100vh;
-	background-position: center;
-	background-size: cover;
-	background-image: url(https://wallpapercave.com/wp/wp4788903.jpg);
-	background-attachment: fixed;
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-image: url(https://wallpapercave.com/wp/wp4788903.jpg);
+  background-attachment: fixed;
 }
 h1 {
-    display: block;
-    text-align: center;
-    margin-top: 26vw;
-    margin-bottom: 1vw;
-    font-size: 3vw;
-    color: white;
+  display: block;
+  text-align: center;
+  margin-top: 26vw;
+  margin-bottom: 1vw;
+  font-size: 3vw;
+  color: white;
 }
 p {
-    color: white;
-    text-align: center;
-    font-size: 2vw;
-    font-family: 'Rajdhani', monospace;
-    margin-bottom: -3vw;
-    width: 85%;
-    margin-left: auto;
-    margin-right: auto;
+  color: white;
+  text-align: center;
+  font-size: 2vw;
+  font-family: "Rajdhani", monospace;
+  margin-bottom: -3vw;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* WEBSITE ALIGNMENT BLOCKS */
-.round {border-radius: 2vw;}
-.padding {padding: 2.6vw 0 2.6vw 0}
-.block {margin: 0; width: 100%;}
-.block_2c, .block_3c, .block_4c {margin: 0; width: 100%; display: flex; align-items: center;}
-.block_2c>div {width: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center;}
-.block_3c>div {width: 33.33%; display: flex; flex-direction: column; align-items: center; justify-content: center;}
-.block_4c>div {width: 25%; display: flex; flex-direction: column; align-items: center; justify-content: center;}
-.centered {display: flex; align-items: center; justify-content: center;}
-.centered_text {text-align: center !important; text-justify: none !important;}
-.column {display: flex; flex-direction: column;}
-
-
-
+.round {
+  border-radius: 2vw;
+}
+.padding {
+  padding: 2.6vw 0 2.6vw 0;
+}
+.block {
+  margin: 0;
+  width: 100%;
+}
+.block_2c,
+.block_3c,
+.block_4c {
+  margin: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.block_2c > div {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.block_3c > div {
+  width: 33.33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.block_4c > div {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.centered_text {
+  text-align: center !important;
+  text-justify: none !important;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+}
 
 /* FONT */
 .font_m1 {
-	font-family: 'Rajdhani', sans-serif;
+  font-family: "Rajdhani", sans-serif;
 }
 .font_m2 {
-	font-family: 'Alkatra', sans-serif;
+  font-family: "Alkatra", sans-serif;
 }
 .titlu {
-     font-size: 3.5vw;
-     color: white;
-     margin-top: -0vw;
+  font-size: 3.5vw;
+  color: white;
+  margin-top: -0vw;
 }
-
-
 
 /* HEADER */
 .header {
-    width: 100%;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 3vw;
-   }
-
-
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3vw;
+}
 
 /* FOOTER */
 .footer {
-	position: relative;
-	bottom: 0;
-	left: 0;
-	
-	width: 100%;
-	height: auto;
-	background-color: #0b203d;
-	margin-top: 10vw;
+  position: relative;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: auto;
+  background-color: #0b203d;
+  margin-top: 10vw;
 }
-.footer>div {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	
-	width: 100%;
-	height: 3vw;
-	margin: 2vw 0;
-	
-	background-color: #0b203d;
+.footer > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 3vw;
+  margin: 2vw 0;
+
+  background-color: #0b203d;
 }
 .pf {
-	text-align: center;
-	margin: 0;
-	color: white;
-	font-weight: 500;
-	font-size: 1.5vw;
+  text-align: center;
+  margin: 0;
+  color: white;
+  font-weight: 500;
+  font-size: 1.5vw;
 }
 .copyright {
-	text-decoration: none;
-	color: white;
+  text-decoration: none;
+  color: white;
 }
-
-
 
 /* LINK FORMATING */
-a:link, a:visited, a:link:active, a:visited:active {
-	color: #FFFFFF;
-	text-decoration: none;
-	cursor: pointer;
+a:link,
+a:visited,
+a:link:active,
+a:visited:active {
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
 }
-
-
 
 /* SCROLLBAR */
 /* width */
 ::-webkit-scrollbar {
-	width: 0.8vw;
+  width: 0.8vw;
 }
 /* Track */
 ::-webkit-scrollbar-track {
-	background: #15202E;
+  background: #15202e;
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
-	background: #25355c;
-	border-radius: 100vw;
+  background: #25355c;
+  border-radius: 100vw;
 }
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-	background: #31477B;
+  background: #31477b;
 }
