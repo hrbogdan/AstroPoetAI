@@ -15,6 +15,12 @@
   margin-bottom: auto;
   text-decoration: none;
   padding: 0;
+  transition: 0.3s;
+}
+
+.nav:hover {
+  transition: 0.3s;
+  transform: scale(130%);
 }
 
 .but1 {
